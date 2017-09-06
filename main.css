@@ -527,3 +527,32 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+.courses1 {
+  width: 39%;
+  font-family: Tahoma, Geneva, sans-serif;
+  background-color: #d8d8d8;
+  border: 0.125em solid #000000;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  line-height: 1.75em;
+}
+
+.courselist {
+  width: 40%;
+  border-right: 0.063em solid #000000;
+  padding: 1em;
+}
+
+.teachyear {
+  width: 60%;
+  margin-left: 4%;
+}
+
+.maincourses {
+  justify-content: space-between;
+  padding: 0 8em;
+}
