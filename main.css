@@ -46,6 +46,27 @@ body {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 900px) {
+  .school  {
+    font-size: 40px;
+    margin-left: 0;
+  }
+  .menu {
+    margin-right: 0;
+    font-size: 1.25em;
+    word-spacing: 1.5em;
+    font-family: sans-serif;
+  }
+  .menu a {
+    border-left: 2px solid #000000;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
 .menu a:visited {
   color: #000000;
 }
@@ -56,31 +77,73 @@ body {
 }
 
 main {
-  margin: 5%;
+  margin: 0 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .oak {
   width: 25%;
   font-family: Tahoma, Geneva, sans-serif;
   margin-right: 5%;
+  margin-top: 5%;
 }
 
+@media only screen and (max-width: 770px) {
+  .oak {
+    width: 75%;
+    margin-top: 5%;
+  }
+  main {
+    margin: 5% 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .school  {
+    font-size: 20px;
+    margin-left: 8%;
+  }
+  .menu {
+    margin-right: 0;
+    font-size: 1em;
+    word-spacing: 1.5em;
+    font-family: sans-serif;
+  }
+  .menu a {
+    border-left: 2px solid #000000;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .oak {
+    width: 100%;
+    margin: 2% 0;
+  }
+  main {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 .oaktop {
   display: flex;
   align-items: center;
-  width: fit-content;
   height: 100px;
   background-color: #d8d8d8;
   border: 2px solid #000000;
 }
 
 .oaktop img {
-  width: 20%;
+  width: 5em;
   background-color: #ffffff;
   border-radius: 50%;
   margin-left: 10%;
@@ -92,6 +155,7 @@ main {
 
 .oakbottom {
   display: flex;
+  width: 100%;
 }
 
 .oakcourse {
@@ -121,243 +185,40 @@ main {
   margin-left: 10%;
 }
 
-.joy {
-  width: 25%;
-  font-family: Tahoma, Geneva, sans-serif;
-  margin-right: 5%;
-}
-
-
-.joytop {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 100px;
-  background-color: #d8d8d8;
-  border: 2px solid #000000;
-}
-
-.joytop img {
-  width: 20%;
-  background-color: #ffffff;
-  border-radius: 50%;
-  margin-left: 10%;
-}
-
-.joytop p {
-  margin-left: 5%;
-}
-
-.joybottom {
-  display: flex;
-}
-
-.joycourse {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.joyqual {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.joybottom p {
-  margin-left: 10%;
-}
-
-.elm {
-  width: 25%;
-  font-family: Tahoma, Geneva, sans-serif;
-  margin-right: 5%;
-}
-
-
-.elmtop {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 100px;
-  background-color: #d8d8d8;
-  border: 2px solid #000000;
-}
-
-.elmtop img {
-  width: 20%;
-  background-color: #ffffff;
-  border-radius: 50%;
-  margin-left: 10%;
-}
-
-.elmtop p {
-  margin-left: 5%;
-}
-
-.elmbottom {
-  display: flex;
-}
-
-.elmcourse {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.elmqual {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.elmbottom p {
-  margin-left: 10%;
-}
-
-.jenny {
-  width: 25%;
-  font-family: Tahoma, Geneva, sans-serif;
-  margin-right: 5%;
-  margin-top: 5%;
-}
-
-
-.jennytop {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 100px;
-  background-color: #d8d8d8;
-  border: 2px solid #000000;
-}
-
-.jennytop img {
-  width: 20%;
-  background-color: #ffffff;
-  border-radius: 50%;
-  margin-left: 10%;
-}
-
-.jennytop p {
-  margin-left: 5%;
-}
-
-.jennybottom {
-  display: flex;
-}
-
-.jennycourse {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.jennyqual {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.jennybottom p {
-  margin-left: 10%;
-}
-
-.rowan {
-  width: 25%;
-  font-family: Tahoma, Geneva, sans-serif;
-  margin-right: 5%;
-  margin-top: 5%;
-}
-
-
-.rowantop {
-  display: flex;
-  align-items: center;
-  width: fit-content;
-  height: 100px;
-  background-color: #d8d8d8;
-  border: 2px solid #000000;
-}
-
-.rowantop img {
-  width: 20%;
-  border-radius: 50%;
-  margin-left: 10%;
-}
-
-.rowantop p {
-  margin-left: 5%;
-}
-
-.rowanbottom {
-  display: flex;
-}
-
-.rowancourse {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.rowanqual {
-  display: flex;
-  height: 100px;
-  width: 50%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-right: 2px solid #000000;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.rowanbottom p {
-  margin-left: 10%;
-}
-
 .ash {
   width: 20%;
   font-family: Tahoma, Geneva, sans-serif;
   margin-right: 5%;
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .ash {
+    width: 40%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .ash {
+    width: 60%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  main {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .ash {
+    width: 90%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
 }
 
 .ashtop {
@@ -412,120 +273,9 @@ main {
   flex-direction: column;
 }
 
-.misty {
-  width: 20%;
-  font-family: Tahoma, Geneva, sans-serif;
-  margin-right: 5%;
-}
-
-.mistytop {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 150px;
-  width: 100%;
-  background-color: #d8d8d8;
-  border: 2px solid #000000;
-}
-
-.mistytop p {
-  text-align: center;
-}
-
-.mistytop img {
-  width: 5em;
-  height: 5em;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.mistybottom {
-  display: flex;
-  height: 140px;
-  width: 100%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
-  justify-content: center;
-  font-size: .875em;
-  line-height: 2em;
-}
-
-.mistycourse {
-  width: 50%;
-  padding-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.mistyqual {
-  width: 50%;
-  padding-left: 2%;
-  padding-top: 5%;
-  display: flex;
-  flex-direction: column;
-}
-
-.brock {
-  width: 20%;
-  font-family: Tahoma, Geneva, sans-serif;
-  margin-right: 5%;
-}
-
-.brocktop {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 150px;
-  width: 100%;
-  background-color: #d8d8d8;
-  border: 2px solid #000000;
-}
-
-.brocktop p {
-  text-align: center;
-}
-
-.brocktop img {
-  width: 5em;
-  height: 5em;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.brockbottom {
-  display: flex;
-  height: 140px;
-  width: 100%;
-  background-color: #d8d8d8;
-  border-bottom: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
-  justify-content: center;
-  font-size: .875em;
-  line-height: 2em;
-}
-
-.brockcourse {
-  width: 50%;
-  padding-top: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.brockqual {
-  width: 50%;
-  padding-left: 2%;
-  padding-top: 5%;
-  display: flex;
-  flex-direction: column;
+.maincourses {
+  justify-content: space-between;
+  padding: 0 8em;
 }
 
 .courses1 {
@@ -534,11 +284,62 @@ main {
   background-color: #d8d8d8;
   border: 0.125em solid #000000;
   margin-right: 5%;
+  margin-top: 5%;
   margin-bottom: 5%;
   height: 100px;
   display: flex;
   align-items: center;
   line-height: 1.75em;
+}
+
+@media only screen and (max-width: 1400px) {
+  .maincourses {
+    padding: 0 2em;
+    justify-content: space-between;
+
+  }
+  .courses1 {
+    width: 39%;
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: #d8d8d8;
+    border: 0.125em solid #000000;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%
+    height: 100px;
+    display: flex;
+    align-items: center;
+    line-height: 1.75em;
+  }
+}
+
+@media only screen and (max-width: 1220px) {
+  main {
+    margin: 2%;
+  }
+  .maincourses {
+    justify-content: center;
+  }
+  .courses1 {
+    width: 60%;
+    height: 130px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  main {
+    margin: 0;
+    padding: 0;
+  }
+  .maincourses {
+    padding: 0;
+    margin: 0;
+  }
+  .courses1 {
+    width: 100%;
+    height: 160px;
+    margin: 2%
+  }
 }
 
 .courselist {
@@ -550,9 +351,4 @@ main {
 .teachyear {
   width: 60%;
   margin-left: 4%;
-}
-
-.maincourses {
-  justify-content: space-between;
-  padding: 0 8em;
 }
