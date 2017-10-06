@@ -19,7 +19,7 @@ var courseTeacher = "Oak";
 var semester = "2017/2018";
 console.log("Course: " + courseName + "\n" + "Teacher: " + "\n" + semester);
 
-        var teacherRatings = [];
+var teacherRatings = [3.9, 4.3, 5.0];
 
 
         function getRatingAvg(arrayOfRatings) {
@@ -41,23 +41,23 @@ console.log("Course: " + courseName + "\n" + "Teacher: " + "\n" + semester);
         }
 
         function onAddRating() {
-            var response = prompt("We would like for you to review.   Please enter a rating between 0.0 - 5.0?");
+            var response = window.prompt("We would like for you to review.   Please enter a rating between 0.0 - 5.0?");
             var responseAsNumber = parseFloat(response);
-            if (isNaN(responseAsNumber) || responseAsNumber < 0 || responseAsNumber > 5) {  // yes, user entered bad value
+            if (isNaN(responseAsNumber) || responseAsNumber < 0 || responseAsNumber > 5) {
                 onAddRating();
             } else {
                 teacherRatings = addTeacherRating(teacherRatings, responseAsNumber);
-                alert("Thanks for your review!   " + teacherName + " average rating is now " + getRatingAvg(teacherRatings) + ".");
+                window.alert("Thanks for your review!   " + teacherName + " average rating is now " + getRatingAvg(teacherRatings) + ".");
             }
         }
 
-
-        function onReset() {
-            teacherRatings.splice(0, teacherRatings.length);
-        }
+        console.log(getRatingAvg(teacherRatings));
+        console.log(addTeacherRating(teacherRatings, 4.5));
+        console.log(onAddRating());
 
         availableCourses = [
             ["Pokemon and Us", "POKEDEX BASICS"],
+            ["Poke Berries", "POKE HEALTH"],
             ["Poke Medicine", "POKE HEALTH"],
             ["Breeding Patterns", "EGGS AND HATCHING"],
             ["Pokemon Law", "ACADEMY TRAINING"],
@@ -82,7 +82,6 @@ console.log("Course: " + courseName + "\n" + "Teacher: " + "\n" + semester);
 
             departmentName = departmentName.toUpperCase();
             if (departmentName === 'POKEDEX BASICS' || departmentName === 'POKE HEALTH' || departmentName === 'EGGS AND HATCHING' || departmentName === 'ACADEMY TRAINING' || departmentName === 'ANCIENT POKEMON') {
-                // get matching courses
                 var courses = filterCourses(availableCourses, departmentName);
 
                 var matchString = '';
@@ -96,3 +95,6 @@ console.log("Course: " + courseName + "\n" + "Teacher: " + "\n" + semester);
                 onFindClass();
             }
         }
+
+console.log(filterCourses(availableCourses));
+console.log(onFindClass());
