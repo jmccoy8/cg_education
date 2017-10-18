@@ -98,3 +98,68 @@ var teacherRatings = [3.9, 4.3, 5.0];
 
 console.log(filterCourses(availableCourses));
 console.log(onFindClass());
+
+
+// JS 3 assigment begins
+
+var welcomeCollegeStudent = function(classLevel) {
+  window.alert("Welcome " + classLevel + "!");
+};
+var welcomeHsStudent = function(classLevel) {
+    window.alert("You're still a "+ classLevel + " in high school!");
+};
+
+var gradDate = function(gradMonth, gradYear) {
+    return gradMonth + " " + gradYear;
+};
+
+function welcomeStudentsByGraduatingClass(gradDate, welcomeFx) {
+    var classRank = '';
+
+    // this is not a good way of doing it, but keeping it basic
+    if(gradDate==='December 2017'|| gradDate==='May 2017' || gradDate==='December 2021'|| gradDate==='May 2021') {
+        classRank = 'Senior';
+    } else if(gradDate==='December 2018'|| gradDate==='May 2018' || gradDate==='December 2022'|| gradDate==='May 2022') {
+        classRank = 'Junior';
+    } else if(gradDate==='December 2019'|| gradDate==='May 2019' || gradDate==='December 2023'|| gradDate==='May 2023') {
+        classRank = 'Sophomore';
+    } else if(gradDate==='December 2020'|| gradDate==='May 2020' || gradDate==='December 2024'|| gradDate==='May 2024') {
+        classRank = 'Freshman';
+    }
+
+    if(classRank!=='') {
+        welcomeFx(classRank);
+    }
+}
+
+function promptUser() {
+    var userGradYear = window.prompt("Enter your college graduation year") * 1;
+    var userGradMonth = window.prompt("Enter your college graduation month (May or December only)");
+
+    // validate entries
+    if (isNaN(userGradYear)
+            || (userGradMonth !== 'May' && userGradMonth !== 'December')
+            || userGradYear < 2017
+            || (userGradYear === 2017 && userGradMonth === 'May')) {
+
+        window.alert('Invalid month or year.  Please hit refresh to try again.');
+    } else {
+
+        var gradDateString = gradDate(userGradMonth, userGradYear);
+
+        // and high schooler be college grad years 2022 thru 2026
+        if (userGradYear < 2021) { // in colleeg
+            welcomeStudentsByGraduatingClass(gradDateString, welcomeCollegeStudent);
+        } else if (userGradYear < 2024) { // in high school
+            welcomeStudentsByGraduatingClass(gradDateString, welcomeHsStudent);
+        } else {  // graduation is way off
+            window.alert("whoa, college is some years away...");
+        }
+    }
+}
+
+// kick things off
+promptUser();
+
+//next part of assigment
+var teacher = {name: "Professor Oak", hometown: "Pallet Town", ratings: teacherRatings, }
