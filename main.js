@@ -162,4 +162,230 @@ function promptUser() {
 promptUser();
 
 //next part of assigment
-var teacher = {name: "Professor Oak", hometown: "Pallet Town", ratings: teacherRatings, }
+var teacherObj = {
+    name: "Professor Oak",
+    department: "Pokemon and Us",
+    ratings: [4.3, 3.2, 4.9],
+    addRating: function(newRating) {
+        // "this" used here is a javascript shortcut to reference the
+        // object that owns this function. and therefore, also provides
+        // quick access to the owning objects other properties and functions
+        // such as the ratings array property
+        this.ratings.push(newRating);
+    },
+    getAvgRating: function() {
+        var sum = 0;
+        for (var i = 0; i < this.ratings.length; i++) {
+            sum = sum + this.ratings[i];
+        }
+        if (this.ratings.length > 0) {
+            var teacherAvgRating = sum / this.ratings.length;
+            teacherAvgRating = Math.round(teacherAvgRating * 10) / 10;
+            return teacherAvgRating;
+        } else {
+            return 0;
+        }
+    }
+};
+
+function promptForFourthAssignment() {
+    var userRating = window.prompt("Please enter numeric teacher rating");
+
+    // if not a number, try again
+    // The "isNaN" is a built-in browser function to test a string to see if
+    // it is numeric.   If the string is Not-a-Number (NaN), then it returns true.
+    if(isNaN(userRating)) {
+        promptForFourthAssignment();
+    }
+
+    // convert user entered string to number and reassign to same variable
+    userRating = (userRating * 10)/ 10;
+
+    // print existing teacherObj average rating to console (before adding new rating)
+    console.info("Old teacher rating was " + teacherObj.getAvgRating());
+
+
+
+    // Add rating to teacher object
+    teacherObj.addRating(userRating);
+
+    // print new teacherObj average rating to console (after adding new rating)
+    console.info("New teacher rating is " + teacherObj.getAvgRating());
+}
+
+// prompt user
+promptForFourthAssignment()
+
+//Step 4
+var teacher1 = {
+    name: "Professor Oak",
+    department: "Pokemon and Us",
+    ratings: [4.3, 3.2, 4.9],
+    addRating: function (newRating) {
+        // "this" used here is a javascript shortcut to reference the
+        // object that owns this function. and therefore, also provides
+        // quick access to the owning objects other properties and functions
+        // such as the ratings array property
+        this.ratings.push(newRating);
+    },
+    getAvgRating: function () {
+        var sum = 0;
+        for (var i = 0; i < this.ratings.length; i++) {
+            sum = sum + this.ratings[i];
+        }
+        if (this.ratings.length > 0) {
+            var teacherAvgRating = sum / this.ratings.length;
+            teacherAvgRating = Math.round(teacherAvgRating * 10) / 10;
+            return teacherAvgRating;
+        } else {
+            return 0;
+        }
+    }
+};
+var teacher2 = {
+    name: "Professor Maple",
+    department: "Professor Department 2",
+    ratings: [2.3, 1.2, 1.9],
+    addRating: function (newRating) {
+        // "this" used here is a javascript shortcut to reference the
+        // object that owns this function. and therefore, also provides
+        // quick access to the owning objects other properties and functions
+        // such as the ratings array property
+        this.ratings.push(newRating);
+    },
+    getAvgRating: function () {
+        var sum = 0;
+        for (var i = 0; i < this.ratings.length; i++) {
+            sum = sum + this.ratings[i];
+        }
+        if (this.ratings.length > 0) {
+            var teacherAvgRating = sum / this.ratings.length;
+            teacherAvgRating = Math.round(teacherAvgRating * 10) / 10;
+            return teacherAvgRating;
+        } else {
+            return 0;
+        }
+    }
+};
+var teacher3 = {
+    name: "Professor Apple",
+    department: "Professor Department 3",
+    ratings: [4.9, 3.4, 1.1],
+    addRating: function (newRating) {
+        // "this" used here is a javascript shortcut to reference the
+        // object that owns this function. and therefore, also provides
+        // quick access to the owning objects other properties and functions
+        // such as the ratings array property
+        this.ratings.push(newRating);
+    },
+    getAvgRating: function () {
+        var sum = 0;
+        for (var i = 0; i < this.ratings.length; i++) {
+            sum = sum + this.ratings[i];
+        }
+        if (this.ratings.length > 0) {
+            var teacherAvgRating = sum / this.ratings.length;
+            teacherAvgRating = Math.round(teacherAvgRating * 10) / 10;
+            return teacherAvgRating;
+        } else {
+            return 0;
+        }
+    }
+};
+var course1 = {
+    name: "Pokemon and Us",
+    department: "POKEDEX BASICS",
+    teacher: teacher2
+};
+var course2 = {
+    name: "Pokemon and Us",
+    department: "POKEDEX BASICS",
+    teacher: teacher1
+};
+var course3 = {
+    name: "Poke Berries",
+    department: "POKE HEALTH",
+    teacher: teacher2
+};
+var course4 = {
+    name: "Poke Medicine",
+    department: "POKE HEALTH",
+    teacher: teacher3
+};
+var course5 = {
+    name: "Breeding Patterns",
+    department: "EGGS AND HATCHING",
+    teacher: teacher1
+};
+var course6 = {
+    name: "Pokemon Law",
+    department: "ACADEMY TRAINING",
+    teacher: teacher2
+};
+var course7 = {
+    name: "Evolution",
+    department: "ANCIENT POKEMON",
+    teacher: teacher1
+};
+
+var availableCourses = [
+    course1,
+    course2,
+    course3,
+    course4,
+    course5,
+    course6,
+    course7
+];
+
+// redefine filterCourses function
+/*
+ function filterCourses(coursesArray, departmentName) {
+     var matches = [];
+     for (var i = 0; i < coursesArray.length; i++) {
+     var course = coursesArray[i];
+     if (course[1] === departmentName) {
+     matches.push(course);
+     }
+     }
+     console.log("Our filter found " + matches.length + " courses for department: " + departmentName);
+     return matches;
+ }
+ */
+function filterCourses(coursesArray, departmentName) {
+    var matches = [];
+    for (var i = 0; i < coursesArray.length; i++) {
+        var course = coursesArray[i];
+
+        // check if course's department is requested department
+        if (course.department.toUpperCase() === departmentName.toUpperCase()) {
+            matches.push(course);
+        }
+    }
+    console.log("Our filter found " + matches.length + " courses for department: " + departmentName);
+    return matches;
+}
+
+function findCoursesByDepartment() {
+
+    var departmentName = window.prompt("Please enter a department name (Pokedex Basics, Poke Health, Eggs and Hatching, Academy Training, or Ancient Pokemon)");
+
+    var courses = filterCourses(availableCourses, departmentName);
+
+    var matchString = '';
+    var commaString = '';
+    for (var i = 0; i < courses.length; i++) {
+        var course = courses[i];
+        matchString = matchString + commaString + course.name;
+        commaString = ', ';
+    }
+
+    if(matchString.length > 0) {
+        window.alert("You can choose from one of the following courses: \n\n" + matchString);
+    } else {
+        window.alert("The department name did not match any courses on record.  Please refresh browser and try again");
+    }
+}
+
+// prompt user to enter department
+findCoursesByDepartment()
